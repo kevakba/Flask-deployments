@@ -10,6 +10,7 @@ app = Flask(__name__)
 # Load the model from the file
 iris_model = joblib.load('model2/iris_model.pkl')
 
+# function to fetch the default index page and give result
 @app.route('/', methods=['GET','POST'])
 def predict():
     # Get values from browser
